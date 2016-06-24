@@ -74,8 +74,9 @@ if splitPageNums[-1] < maxPages:
 
 startPageNum = 1
 for i, splitPageNum in enumerate(splitPageNums):
-  outputFN = '%s.part%d.%d_%d.pdf' % \
-             (baseFN, i + 1, startPageNum, splitPageNum)
+  #outputFN = '%s.part%d.%d_%d.pdf' % \
+  #           (baseFN, i + 1, startPageNum, splitPageNum)
+  outputFN = 'output%d.pdf' % (i + 1)
   writeContext = CGPDFContextCreateWithFilename(outputFN, pageRect)
 
   print 'Writing page %d-%d to %s...' % \
